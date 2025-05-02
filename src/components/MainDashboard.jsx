@@ -8,14 +8,14 @@ const MainDashboard = ({ fetchWeather, data, isLoading }) => {
   const [cityInput, setCityInput] = useState('');
   const videoRef = useRef();
 
-  const iconCode = data?.weather?.icon || '';
-  const bgVideoFile = iconToVideoMap[iconCode] || 'default.mp4';
-
+  const iconCode = data?.weather?.icon;
+  const videoUrl = iconToVideoMap[iconCode] ?? iconToVideoMap.default;
+  
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.load();
     }
-  }, [bgVideoFile]);
+  }, [videoUrl]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,7 +32,7 @@ const MainDashboard = ({ fetchWeather, data, isLoading }) => {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
-        <source src={`/bg/${bgVideoFile}`} type="video/mp4" />
+       <source src={videoUrl} type="video/mp4" />
       </video>
 
       {/* 🌤 Weather Dashboard */}
