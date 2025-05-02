@@ -1,12 +1,53 @@
-# React + Vite
+# 🌦️ Weather Dashboard React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek and responsive weather dashboard built with **React**, **Vite**, and **Tailwind CSS**, featuring live background videos based on current weather conditions using the OpenWeatherMap API.
 
-Currently, two official plugins are available:
+## 📸 Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![preview](./preview.png)
 
-## Expanding the ESLint configuration
+> Background changes dynamically (e.g. clear, rain, thunderstorm)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🌐 Live Demo
+
+👉 https://weather-dashboard-react-arrieaunps-projects.vercel.app/
+
+---
+
+## 🚀 Features
+
+- 🔍 **City-based search** with real-time weather data
+- 🎥 **Dynamic background video** based on weather icon (via Cloudinary)
+- 📅 Hourly & 5-day forecasts
+- 🌬️ Wind speed, humidity, pressure display
+- 📱 Mobile responsive UI
+
+---
+
+## 🛠️ Tech Stack
+
+- ⚛️ React + Vite
+- 💨 Tailwind CSS
+- 🌤️ OpenWeatherMap API
+- ☁️ Cloudinary (for video CDN)
+- 🔁 Vercel (for deployment)
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/arrieaunp/weather-dashboard-react.git
+cd weather-dashboard-react
+npm install
+npm run dev
+```
+
+---
+
+## ⚙️ Environment Variables
+Create a .env file at the root:
+```bash
+VITE_WEATHER_API_KEY=your_openweathermap_api_key
+```
+
